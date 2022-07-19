@@ -1,0 +1,364 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 0;
+    background-image: url("images/backg.jpg");
+    background-size: 100%;
+    background-image: no-repeat;
+    color: 		#DC143C;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+h1{
+    letter-spacing: 0.5rem;
+    line-height: 1.4;
+    font-size: 2.1;
+}
+/*<!!!!HEADER!!!!>*/
+/*Nav-Bar Menu*/
+
+header{
+    width: 100%;
+    height: 100px;
+    background: white;
+    display: flex;
+}
+.logo img{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+}
+.nav-bar{
+    width: 100%;
+    height: 100%;
+    left: 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+.nav-bar-links-menu {
+    width: 100%;
+}
+.nav-bar-links-menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: 	#DC143C;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.nav-bar-links-menu:hover{
+    text-shadow: black;
+    text-decoration: 1px underline black;
+}
+.nav-bar-links-menu a:hover{
+    color: 	black;
+}
+
+.active-nav-link{
+    text-decoration: 1px underline black;
+}
+.active-nav-link a{
+    color: 	black !important;
+}
+
+/*mini-Menu*/
+#menu-produktet{
+    position: absolute;
+    background-color: brown;
+    height: 50px;
+    display: flex;
+    width: 100%;
+    top: 100px;
+}
+.menu-produktet-items{
+    width: 100%;
+    text-align: center;
+    align-self: center;
+}
+.menu-produktet-items a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.menu-produktet-items a:hover{
+    text-decoration: underline;
+    text-shadow: black;
+}
+
+
+.active-mini-menu {
+    text-decoration: underline;
+    
+}
+.active-mini-menu a{
+    color: 	black !important;
+}
+
+
+/*<!!!!MAIN!!!!>*/
+
+/*indeksi*/
+main{
+    position: absolute;
+    padding: 0;
+    overflow: auto;
+    left: 0;
+    bottom: 50px;
+    right: 0;
+    top: 100px;
+}
+.left-side{
+    text-align: center;
+    align-self: center;
+}
+.mid-side{
+    width: 70%;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-30%);
+    background-image: url('images/HOME/nje.jpg');
+    background-size: 100% 100%;
+    border: 2px solid brown;
+    border-radius: 20px;
+    animation: slider 18s infinite forwards;
+}
+@keyframes slider{
+    15%{background-image: url('images/HOME/nje.jpg');}
+
+    45%{background-image: url('images/HOME/dy.jpg');}
+
+    85%{background-image: url('images/HOME/tre.jpg');}
+}
+
+/*Produktet*/
+
+
+
+.produktet-kryesore{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.produkti{
+    position: relative;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.produkti-profile{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+}
+.produkti-profile-text{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.produkti-profile-text .text{
+    transition:1s;
+	font-weight:600;
+	color:transparent;
+}
+
+.produkti-profile-text:hover .text{
+    font-weight: 600;
+	color:brown;
+}
+
+.img-darken{
+    transition:1s;	
+	filter:brightness(10%);
+}
+
+.produkti-blerje{
+    width: 418px;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    background-color: whitesmoke;
+    margin-left: 15px;
+    border-radius: 0 0 12px 12px;
+    max-width: 418px;
+    max-height: 100px;
+}
+#producti-emri{
+    padding: 5px;
+}
+/*buttonat increment decrement*/
+.quantity{
+    width: 200px;
+    background: #ddcf0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 12px;
+    text-align: center;
+    margin-left: 20px 0;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+}
+.quantity label{
+    margin-right: 15px;
+}
+.button{
+    width: 37px;
+    height: 37px;
+    border: none;
+    border-radius: 12px;
+    background: #ddcf0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+.button:active{
+    background: #ccc;
+}
+.quantity input {
+    width: 30px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+/*blej btn*/
+#btn{
+    background-color: #ddcf0c;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
+.response{
+    display: none;
+}
+
+.btn-response{
+    transition: 1s;
+    display: block;
+}
+
+#main-produktet{
+    position: absolute;
+    padding: 0;
+    overflow: auto;
+    left: 0;
+    bottom: 50px;
+    right: 0;
+    top: 150px;
+}
+
+/*Rreth Nesh*/
+
+
+
+.rreth-nesh-container{
+    display: flex;
+    border: 2px solid brown;
+}
+.rreth-nesh-container-left{
+ 
+    padding: 20px;
+}
+
+/*Kontakti*/
+
+.kontakti{
+    display: flex;
+    border: 2px solid brown;
+    padding :20px;
+}
+.kontakti-mail{
+    width: 50%;
+}
+
+#kontakti-table{
+    border:2px solid brown;
+    color: brown;
+    width: 50%;
+    padding: 10px;
+}
+textarea{
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+#h3-kontakti{
+    padding: 0;
+    margin: 0;
+}
+.lokacioni{
+    width: 50%;
+    padding: 20px;
+    align-items: center;
+
+    border: 2px solid brown;
+}
+#iframee{
+    justify-content: center;
+    align-self: center;   
+}
+#table-content-heading{
+    width: 500px;
+    align-self: center;
+    justify-content: center;
+}
+input{
+    width: 250px;
+    cursor: pointer;
+}
+
+/*Footer*/
+
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    text-align: center;
+    background: white;
+    align-self: center;
+    border: 1px solid black;
+}
+#footer{
+    text-transform: uppercase;
+    font-family: 'Lato' ,sans-serif;
+    font-weight:bold;
+}
+
+
+/*PHOTO SLIDERS https://codemyui.com/ripple-loading-effect-image-slider/*/
